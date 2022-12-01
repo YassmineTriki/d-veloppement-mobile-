@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        class BienvenueState extends React.Component {
+          constructor(props){
+            let prenom =this.props.saisie.split(" ")[0];
+          this.state = {saisie:prenom}
+          }
+          
+        
+       render(){
+        return <h1>bonjour {this.state.saisie}!</h1>
+       }
+    }
+        ReactDOM.render ( <BienvenueState saisie="yasmine"/>, document.getElementById('root'));
+    </script>
+</body>
+</html>

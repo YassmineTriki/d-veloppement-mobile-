@@ -1,0 +1,94 @@
+*******APP JS ********
+import React from 'react';
+import MonMenu from '../components/Application';
+import Accueil from '../components/Acceuil';
+import Apropos from '../components/Apropos';
+import Contact from '../components/Contact';
+import {BrowserRouter, Routes, Route,} from 'react-router-dom';
+
+
+
+function App() {
+  return (
+    <div className="App">
+    <Routes>
+      <Route path="/" element={<MonMenu/>}>
+          <Route index element={<Accueil/>}/>
+          <Route path="apropos" element={<Apropos/>}/>
+          <Route path="contact" element={<Contact/>}/>
+      </Route>
+    </Routes>
+    </div>
+    
+       
+  );
+}
+
+
+
+*********ACCUEIL JS********
+function Accueil(){
+    return(
+        <h1>voici la page Accueil</h1>
+    )
+    }
+    export default Accueil;
+
+*****APROPOS******
+function Apropos(){
+    return(
+        <h1>voici la page Apropos</h1>
+    )
+    }
+    export default Apropos;
+
+*****CONTACT****
+function Contact(){
+    return(
+        <h1>voici la page contact</h1>
+    )
+    }
+    export default Contact;
+*****APPLICATION JS*****
+import {Link,  Outlet} from "react-router-dom";
+const MonMenu=()=>{
+    return(
+        <>
+        <nav>
+           <ul>
+                <li>
+                    <Link to="/" >Accueil</Link>
+                </li>
+                <li>
+                    <Link to="/apropos" >Apropos</Link>
+                </li>
+                <li>
+                    <Link to="/contact" >Contact</Link>
+                </li>
+           </ul>
+        </nav>
+        <Outlet/>
+        </>
+    )
+};
+export default MonMenu;
+
+
+*****INDEX JS *****
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import App  from './components/App';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+);
+
+
+reportWebVitals();
+
+export default App;
