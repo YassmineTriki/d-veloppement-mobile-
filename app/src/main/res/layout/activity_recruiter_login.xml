@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log in"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:gravity="center" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:hint="Email"
+                android:id="@+id/email_login"
+                >
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_margin="10dp"
+                android:id="@+id/login_password">
+
+            </EditText>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Log in"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:id="@+id/btn_login">
+
+            </Button>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:gravity="center">
+            </TextView>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:id="@+id/btn_reg"
+                android:layout_margin="10dp">
+            </Button>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Register As Recruiter"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:id="@+id/btn_reg_rec"
+                android:layout_margin="10dp">
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
